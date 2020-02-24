@@ -1,0 +1,827 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="keywords" content="your,keywords">
+	<meta name="description" content="Reserva lugares y alojamientos en toda Cuba.">
+  <!-- Bootstrap  -->
+  <link rel="stylesheet" href="../assets/libs/bootstrap/css/bootstrap.min.css" crossorigin="anonymous">
+  <!-- Bootstrap Datepicker -->
+  <link rel="stylesheet" href="../assets/libs/bootstrap-datepicker/datepicker3.css" crossorigin="anonymous">
+  <!-- Custom  -->
+  <link rel="stylesheet" href="../assets/css/app.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../assets/fonts/css/font-awesome.min.css">
+  <title>Cubahostal - Home Page</title>
+</head>
+
+<body>
+  <!-- Header BEGIN -->
+  <header>
+    <div class="collapse bg-dark" id="navbarHeader">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-md-7 py-2">
+          </div>
+          <div class="col-sm-4 offset-md-1 py-4 text-right">
+            <h4 class="text-white">Federico de las Mercedes</h4>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-white">Opción 1</a></li>
+              <li><a href="#" class="text-white">Configuración 2</a></li>
+              <li><a href="#" class="text-white">Cerrar Sesión 3</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+      <div class="container d-flex justify-content-between">
+        <a href="#" class="navbar-brand d-flex align-items-center">
+          <img src="../assets/images/logo_text.png" class="d-inline-block align-top img-fluid" alt="">
+        </a>
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa fa-user-circle"></i></h4> <span class="d-none d-md-inline">Mi cuenta</span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <!-- Header END -->
+
+  <!-- Slogan BEGIN -->
+  <section class="py-4 text-center">
+    <div class="container">
+      <h1>Encuentra tu casa en Cuba</h1>
+      <h5>Más de 500 hostales en 24 destinos en Cuba</h5>
+    </div>
+  </section>
+  <!-- Slogan END -->
+
+  <!-- Booking Filter BEGIN -->
+  <section class="py-4 text-left">
+    <div class="container">
+      <div class="btn-group col-sm-12 col-md-5 px-0">
+        <a href="#DateCollapse" data-toggle="collapse" class="toggleDate btn btn-lg btn-outline-primary" aria-controls="DateCollapse"><i class="fa fa-calendar"></i> Fechas</a>
+        <a href="#GuestCollapse" data-toggle="collapse" class="toggleGuest btn btn-lg btn-outline-primary" aria-controls="DateCollapse"><i class="fa fa-users"></i> Huéspedes</a>
+        <a class="btn btn-lg btn-outline-primary" aria-controls="DateCollapse">
+          <input type="checkbox" name="wifi" id="wifi" value="wifi">
+          <label class="form-check-label" for="wifi">Wifi</label>
+        </a>
+      </div>
+        <!-- Booking Filter Date BEGIN -->
+        <div class="pt-2 col-sm-12 col-md-5 px-0">
+          <div class="collapse" style="position: absolute; transition: none; z-index: 2;" id="DateCollapse">
+            <div class="card">
+              <form class="form">
+                <div class="card-header">
+                  <i class="fa fa-calendar"></i> Fechas
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                      <div class="form-group">
+                        <div class="btn-group">
+                            <div class="input-daterange input-group" id="BookingDateRange">
+                            <div class="input-group-content col-6">
+                              <label>Entrada</label>
+                              <input type="text" class="form-control" name="start">
+                            </div>
+                            <div class="input-group-content col-6">
+                                <label>Salida</label>
+                                <input type="text" class="form-control" name="end" id="end">
+                                <div class="form-control-line"></div>
+                            </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                  <button type="reset" class="btn btn-light">Limpiar</button>
+                  <button type="submit" class="btn btn-primary">Salvar</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- Booking Filter Date END -->
+        <!-- Booking Filter Guest BEGIN -->
+        <div class="col-sm-12 col-md-5 px-0">
+          <div class="collapse" style="position: absolute; transition: none; z-index: 2;" id="GuestCollapse">
+            <div class="card">
+              <div class="card-header">
+                <i class="fa fa-users"></i> Huéspedes
+              </div>
+              <form class="form">
+                <div class="card-body">
+                  <div class="row px-0">
+                    <div class="col-6 col-md-4">
+                      <label>Adultos</label>
+                      <div class="input-group px-0">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-outline-secondary Adultminus" type="button"><i class="fa fa-minus"></i></button>
+                        </div>
+                        <input type="text" class="form-control Adultcount text-center" value="1">
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-secondary Adultplus" type="button" ><i class="fa fa-plus"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-4"> 
+                      <label>Niños: <Small>2 a 12 Años</Small></label>
+                      <div class="input-group px-0">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-outline-secondary Childrenminus" type="button"><i class="fa fa-minus"></i></button>
+                        </div>
+                        <input type="text" class="form-control Childrencount text-center" value="0">
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-secondary Childrenplus" type="button" ><i class="fa fa-plus"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-4"> 
+                      <label>Niños: <small>- 2 Años</small></label>
+                      <div class="input-group px-0">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-outline-secondary Enfantminus" type="button"><i class="fa fa-minus"></i></button>
+                        </div>
+                        <input type="text" class="form-control Enfantcount text-center" value="0">
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-secondary Enfantplus" type="button" ><i class="fa fa-plus"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                  <button type="reset" class="btn btn-light">Limpiar</button>
+                  <button type="submit" class="btn btn-primary">Salvar</button>
+                </div>
+              </form>
+              <!-- Booking Filter Guest END -->
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
+  <!-- Booking Filter END -->
+
+  <!-- Destination Map BEGIN -->
+  <section class="py-4 text-left">
+    <div class="container">
+      <img src="../assets/images/cuban_destinations_map.png" class="img-fluid" alt="Responsive image">
+    </div>
+  </section>
+  <!-- Destination Map END -->
+
+  <!-- Popular Destinations BEGIN -->
+  <section class="py-5">
+    <div class="container">
+      <h4 class="py-4">Destinos populares en Cuba</h4>
+      <div class="row row-cols-2 row-cols-sm-2 row-cols-md-5">
+
+        <div class="col">
+            <img src="../assets/images/destinations/la_habana.png" class="img-fluid" alt="La Habana">
+            <div class="px-0 py-2">
+              <h4 class="mb-0">La Habana</p>
+              <h6>50 hostales</h6>
+            </div>
+        </div>
+
+        <div class="col">
+            <img src="../assets/images/destinations/vinales.png" class="img-fluid" alt="La Habana">
+            <div class="px-0 py-2">
+              <h4 class="mb-0">La Habana</p>
+              <h6>50 hostales</h6>
+            </div>
+        </div>
+
+        <div class="col">
+            <img src="../assets/images/destinations/varadero.png" class="img-fluid" alt="La Habana">
+            <div class="px-0 py-2">
+              <h4 class="mb-0">La Habana</p>
+              <h6>50 hostales</h6>
+            </div>
+        </div>
+
+        <div class="col">
+            <img src="../assets/images/destinations/trinidad.png" class="img-fluid" alt="La Habana">
+            <div class="px-0 py-2">
+              <h4 class="mb-0">La Habana</p>
+              <h6>50 hostales</h6>
+            </div>
+        </div>
+
+        <div class="col">
+            <img src="../assets/images/destinations/santiago_de_cuba.png" class="img-fluid" alt="La Habana">
+            <div class="px-0 py-2">
+              <h4 class="mb-0">La Habana</p>
+              <h6>50 hostales</h6>
+            </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- Popular Destinations END -->
+
+  <!-- All Destinations BEGIN -->
+  <i class="fa"></i>
+  <section>
+    <div class="container">
+      <a class="collapsed collapsebutton" data-toggle="collapse" href="#alldestinations" role="button" aria-expanded="false" aria-controls="alldestinations">
+        <h3>Todos los destinos (24) <i class="fa fa-chevron-right"></i></i></h3>
+      </a>
+
+      <div class="collapse" id="alldestinations">
+        <div class="row row-cols-2 row-cols-sm-2 row-cols-md-5">
+
+          <div class="col">
+              <img src="../assets/images/destinations/la_habana.png" class="img-fluid" alt="La Habana">
+              <div class="px-0 py-2">
+                <h4 class="mb-0">La Habana</p>
+                <h6>50 hostales</h6>
+              </div>
+          </div>
+
+          <div class="col">
+              <img src="../assets/images/destinations/vinales.png" class="img-fluid" alt="La Habana">
+              <div class="px-0 py-2">
+                <h4 class="mb-0">La Habana</p>
+                <h6>50 hostales</h6>
+              </div>
+          </div>
+
+          <div class="col">
+              <img src="../assets/images/destinations/la_habana.png" class="img-fluid" alt="La Habana">
+              <div class="px-0 py-2">
+                <h4 class="mb-0">La Habana</p>
+                <h6>50 hostales</h6>
+              </div>
+          </div>
+
+          <div class="col">
+              <img src="../assets/images/destinations/vinales.png" class="img-fluid" alt="La Habana">
+              <div class="px-0 py-2">
+                <h4 class="mb-0">La Habana</p>
+                <h6>50 hostales</h6>
+              </div>
+          </div>
+
+          <div class="col">
+              <img src="../assets/images/destinations/varadero.png" class="img-fluid" alt="La Habana">
+              <div class="px-0 py-2">
+                <h4 class="mb-0">La Habana</p>
+                <h6>50 hostales</h6>
+              </div>
+          </div>
+
+          <div class="col">
+              <img src="../assets/images/destinations/trinidad.png" class="img-fluid" alt="La Habana">
+              <div class="px-0 py-2">
+                <h4 class="mb-0">La Habana</p>
+                <h6>50 hostales</h6>
+              </div>
+          </div>
+
+          <div class="col">
+              <img src="../assets/images/destinations/santiago_de_cuba.png" class="img-fluid" alt="La Habana">
+              <div class="px-0 py-2">
+                <h4 class="mb-0">La Habana</p>
+                <h6>50 hostales</h6>
+              </div>
+          </div>
+
+          <div class="col">
+              <img src="../assets/images/destinations/varadero.png" class="img-fluid" alt="La Habana">
+              <div class="px-0 py-2">
+                <h4 class="mb-0">La Habana</p>
+                <h6>50 hostales</h6>
+              </div>
+          </div>
+
+          <div class="col">
+              <img src="../assets/images/destinations/trinidad.png" class="img-fluid" alt="La Habana">
+              <div class="px-0 py-2">
+                <h4 class="mb-0">La Habana</p>
+                <h6>50 hostales</h6>
+              </div>
+          </div>
+
+          <div class="col">
+              <img src="../assets/images/destinations/santiago_de_cuba.png" class="img-fluid" alt="La Habana">
+              <div class="px-0 py-2">
+                <h4 class="mb-0">La Habana</p>
+                <h6>50 hostales</h6>
+              </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- All Destinations END -->
+
+  <!-- Houses by City BEGIN -->
+  <section class="py-4">
+    <div class="container">
+      <p>
+        <h4>Hostales por provincias</h4>
+      </p>
+      <div class="row row-cols-2 row-cols-sm-2 row-cols-md-5 text-muted">
+
+        <div class="col">
+            <div class="px-0">
+              <ul class="list-unstyled">
+                <li>Pinar del Rio (35)</li>
+                <li>Artemisa (17)</li>
+                <li>La Habana (340)</li>
+              </ul>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="px-0">
+              <ul class="list-unstyled">
+                <li>Matanzas (34)</li>
+                <li>Cienfegos (12)</li>
+                <li>Villa Clara (12)</li>
+              </ul>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="px-0">
+              <ul class="list-unstyled">
+                <li>Sancti Spiritus (12)</li>
+                <li>Ciego de Ávila (12)</li>
+                <li>Camagüey (12)</li>
+              </ul>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="px-0">
+              <ul class="list-unstyled">
+                <li>Las Tunas (12)</li>
+                <li>Holguín (12)</li>
+                <li>Granma (12)</li>
+              </ul>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="px-0">
+              <ul class="list-unstyled">
+                <li>Santiago de Cuba (12)</li>
+                <li>Guantánamo</li>
+              </ul>
+            </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- Houses by City END -->
+
+  <!-- Houses for You BEGIN -->
+  <section class="py-5">
+    <div class="container">
+      <h4 class="py-4">Hostales para ti <small class="px-4"> (La Habana &middot; 15 - 25 nov 2019 &middot; 6 personas &middot; Wifi)</small> </h4>
+      <div class="row row-cols-2 row-cols-sm-2 row-cols-md-4">
+
+        <div class="col pb-4">
+            <img src="../assets/images/houses/house_1.png" class="img-fluid" alt="La Habana">
+            <div class="px-0 py-2">
+              <small>La Habana</small>
+              <h4 class="mb-0">Casa Hostal Richard</h4>
+              <div class="d-flex justify-content-between align-items-center">
+                <small><img src="../assets/images/rating_star.png" class="pb-2"><strong> 5 (13)</strong></small>
+                <small><strong>$55</strong> / noche</small>
+              </div>
+            </div>
+        </div>
+
+        <div class="col pb-4">
+            <img src="../assets/images/houses/house_2.png" class="img-fluid" alt="La Habana">
+            <div class="px-0 py-2">
+              <small>La Habana</small>
+              <h4 class="mb-0">Casa Hostal Richard</h4>
+              <div class="d-flex justify-content-between align-items-center">
+                <small></small>
+                <small><strong>$55</strong> / noche</small>
+              </div>
+            </div>
+        </div>
+
+        <div class="col pb-4">
+            <img src="../assets/images/houses/house_3.png" class="img-fluid" alt="La Habana">
+            <div class="px-0 py-2">
+              <small>La Habana</small>
+              <h4 class="mb-0">Casa Hostal Richard</h4>
+              <div class="d-flex justify-content-between align-items-center">
+                <small></small>
+                <small><strong>$55</strong> / noche</small>
+              </div>
+            </div>
+        </div>
+
+        <div class="col pb-4">
+            <img src="../assets/images/houses/house_4.png" class="img-fluid" alt="La Habana">
+            <div class="px-0 py-2">
+              <small>La Habana</small>
+              <h4 class="mb-0">Casa Hostal Richard</h4>
+              <div class="d-flex justify-content-between align-items-center">
+                <small></small>
+                <small><strong>$55</strong> / noche</small>
+              </div>
+            </div>
+        </div>
+
+        <div class="col pb-4">
+            <img src="../assets/images/houses/house_5.png" class="img-fluid" alt="La Habana">
+            <div class="px-0 py-2">
+              <small>La Habana</small>
+              <h4 class="mb-0">Casa Hostal Richard</h4>
+              <div class="d-flex justify-content-between align-items-center">
+                <small></small>
+                <small><strong>$55</strong> / noche</small>
+              </div>
+            </div>
+        </div>
+
+        <div class="col pb-4">
+            <img src="../assets/images/houses/house_6.png" class="img-fluid" alt="La Habana">
+            <div class="px-0 py-2">
+              <small>La Habana</small>
+              <h4 class="mb-0">Casa Hostal Richard</h4>
+              <div class="d-flex justify-content-between align-items-center">
+                <small></small>
+                <small><strong>$55</strong> / noche</small>
+              </div>
+            </div>
+        </div>
+
+        <div class="col pb-4">
+            <img src="../assets/images/houses/house_7.png" class="img-fluid" alt="La Habana">
+            <div class="px-0 py-2">
+              <small>La Habana</small>
+              <h4 class="mb-0">Casa Hostal Richard</h4>
+              <div class="d-flex justify-content-between align-items-center">
+                <small></small>
+                <small><strong>$55</strong> / noche</small>
+              </div>
+            </div>
+        </div>
+
+        <div class="col pb-4">
+            <img src="../assets/images/houses/house_8.png" class="img-fluid" alt="La Habana">
+            <div class="px-0 py-2">
+              <small>La Habana</small>
+              <h4 class="mb-0">Casa Hostal Richard</h4>
+              <div class="d-flex justify-content-between align-items-center">
+                <small></small>
+                <small><strong>$55</strong> / noche</small>
+              </div>
+            </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- Houses for You END -->
+
+  <!-- All Houses BEGIN -->
+  <section>
+    <div class="container">
+      <a class="collapsed collapsebutton" data-toggle="collapse" href="#allhouses" role="button" aria-expanded="false" aria-controls="allhouses">
+        <h3>Mostrar todos (324) <i class="fa fa-chevron-right"></i></h3>
+      </a>
+
+      <div class="collapse" id="allhouses">
+        <div class="row row-cols-2 row-cols-sm-2 row-cols-md-4">
+
+          <div class="col pb-4">
+              <img src="../assets/images/houses/house_2.png" class="img-fluid" alt="La Habana">
+              <div class="px-0 py-2">
+                <small>La Habana</small>
+                <h4 class="mb-0">Casa Hostal Richard</h4>
+                <div class="d-flex justify-content-between align-items-center">
+                  <small></small>
+                  <small><strong>$55</strong> / noche</small>
+                </div>
+              </div>
+          </div>
+
+          <div class="col pb-4">
+            <img src="../assets/images/houses/house_3.png" class="img-fluid" alt="La Habana">
+            <div class="px-0 py-2">
+              <small>La Habana</small>
+              <h4 class="mb-0">Casa Hostal Richard</h4>
+              <div class="d-flex justify-content-between align-items-center">
+                <small></small>
+                <small><strong>$55</strong> / noche</small>
+              </div>
+            </div>
+        </div>
+
+        <div class="col pb-4">
+            <img src="../assets/images/houses/house_4.png" class="img-fluid" alt="La Habana">
+            <div class="px-0 py-2">
+              <small>La Habana</small>
+              <h4 class="mb-0">Casa Hostal Richard</h4>
+              <div class="d-flex justify-content-between align-items-center">
+                <small></small>
+                <small><strong>$55</strong> / noche</small>
+              </div>
+            </div>
+        </div>
+
+        <div class="col pb-4">
+            <img src="../assets/images/houses/house_5.png" class="img-fluid" alt="La Habana">
+            <div class="px-0 py-2">
+              <small>La Habana</small>
+              <h4 class="mb-0">Casa Hostal Richard</h4>
+              <div class="d-flex justify-content-between align-items-center">
+                <small></small>
+                <small><strong>$55</strong> / noche</small>
+              </div>
+            </div>
+        </div>
+
+        <div class="col pb-4">
+            <img src="../assets/images/houses/house_6.png" class="img-fluid" alt="La Habana">
+            <div class="px-0 py-2">
+              <small>La Habana</small>
+              <h4 class="mb-0">Casa Hostal Richard</h4>
+              <div class="d-flex justify-content-between align-items-center">
+                <small></small>
+                <small><strong>$55</strong> / noche</small>
+              </div>
+            </div>
+        </div>
+
+        <div class="col pb-4">
+            <img src="../assets/images/houses/house_7.png" class="img-fluid" alt="La Habana">
+            <div class="px-0 py-2">
+              <small>La Habana</small>
+              <h4 class="mb-0">Casa Hostal Richard</h4>
+              <div class="d-flex justify-content-between align-items-center">
+                <small></small>
+                <small><strong>$55</strong> / noche</small>
+              </div>
+            </div>
+        </div>
+
+        <div class="col pb-4">
+            <img src="../assets/images/houses/house_8.png" class="img-fluid" alt="La Habana">
+            <div class="px-0 py-2">
+              <small>La Habana</small>
+              <h4 class="mb-0">Casa Hostal Richard</h4>
+              <div class="d-flex justify-content-between align-items-center">
+                <small></small>
+                <small><strong>$55</strong> / noche</small>
+              </div>
+            </div>
+        </div>
+
+        <div class="col pb-4">
+            <img src="../assets/images/houses/house_3.png" class="img-fluid" alt="La Habana">
+            <div class="px-0 py-2">
+              <small>La Habana</small>
+              <h4 class="mb-0">Casa Hostal Richard</h4>
+              <div class="d-flex justify-content-between align-items-center">
+                <small></small>
+                <small><strong>$55</strong> / noche</small>
+              </div>
+            </div>
+        </div>
+
+        <div class="col pb-4">
+            <img src="../assets/images/houses/house_4.png" class="img-fluid" alt="La Habana">
+            <div class="px-0 py-2">
+              <small>La Habana</small>
+              <h4 class="mb-0">Casa Hostal Richard</h4>
+              <div class="d-flex justify-content-between align-items-center">
+                <small></small>
+                <small><strong>$55</strong> / noche</small>
+              </div>
+            </div>
+        </div>
+
+        <div class="col pb-4">
+            <img src="../assets/images/houses/house_5.png" class="img-fluid" alt="La Habana">
+            <div class="px-0 py-2">
+              <small>La Habana</small>
+              <h4 class="mb-0">Casa Hostal Richard</h4>
+              <div class="d-flex justify-content-between align-items-center">
+                <small></small>
+                <small><strong>$55</strong> / noche</small>
+              </div>
+            </div>
+        </div>
+
+        <div class="col pb-4">
+            <img src="../assets/images/houses/house_6.png" class="img-fluid" alt="La Habana">
+            <div class="px-0 py-2">
+              <small>La Habana</small>
+              <h4 class="mb-0">Casa Hostal Richard</h4>
+              <div class="d-flex justify-content-between align-items-center">
+                <small></small>
+                <small><strong>$55</strong> / noche</small>
+              </div>
+            </div>
+        </div>
+
+        <div class="col pb-4">
+            <img src="../assets/images/houses/house_7.png" class="img-fluid" alt="La Habana">
+            <div class="px-0 py-2">
+              <small>La Habana</small>
+              <h4 class="mb-0">Casa Hostal Richard</h4>
+              <div class="d-flex justify-content-between align-items-center">
+                <small></small>
+                <small><strong>$55</strong> / noche</small>
+              </div>
+            </div>
+        </div>
+
+        <div class="col pb-4">
+            <img src="../assets/images/houses/house_8.png" class="img-fluid" alt="La Habana">
+            <div class="px-0 py-2">
+              <small>La Habana</small>
+              <h4 class="mb-0">Casa Hostal Richard</h4>
+              <div class="d-flex justify-content-between align-items-center">
+                <small></small>
+                <small><strong>$55</strong> / noche</small>
+              </div>
+            </div>
+        </div>
+
+        <div class="col pb-4">
+            <img src="../assets/images/houses/house_3.png" class="img-fluid" alt="La Habana">
+            <div class="px-0 py-2">
+              <small>La Habana</small>
+              <h4 class="mb-0">Casa Hostal Richard</h4>
+              <div class="d-flex justify-content-between align-items-center">
+                <small></small>
+                <small><strong>$55</strong> / noche</small>
+              </div>
+            </div>
+        </div>
+
+        <div class="col pb-4">
+            <img src="../assets/images/houses/house_4.png" class="img-fluid" alt="La Habana">
+            <div class="px-0 py-2">
+              <small>La Habana</small>
+              <h4 class="mb-0">Casa Hostal Richard</h4>
+              <div class="d-flex justify-content-between align-items-center">
+                <small></small>
+                <small><strong>$55</strong> / noche</small>
+              </div>
+            </div>
+        </div>
+
+        <div class="col pb-4">
+            <img src="../assets/images/houses/house_5.png" class="img-fluid" alt="La Habana">
+            <div class="px-0 py-2">
+              <small>La Habana</small>
+              <h4 class="mb-0">Casa Hostal Richard</h4>
+              <div class="d-flex justify-content-between align-items-center">
+                <small></small>
+                <small><strong>$55</strong> / noche</small>
+              </div>
+            </div>
+        </div>
+
+        <div class="col pb-4">
+            <img src="../assets/images/houses/house_6.png" class="img-fluid" alt="La Habana">
+            <div class="px-0 py-2">
+              <small>La Habana</small>
+              <h4 class="mb-0">Casa Hostal Richard</h4>
+              <div class="d-flex justify-content-between align-items-center">
+                <small></small>
+                <small><strong>$55</strong> / noche</small>
+              </div>
+            </div>
+        </div>
+
+        <div class="col pb-4">
+            <img src="../assets/images/houses/house_7.png" class="img-fluid" alt="La Habana">
+            <div class="px-0 py-2">
+              <small>La Habana</small>
+              <h4 class="mb-0">Casa Hostal Richard</h4>
+              <div class="d-flex justify-content-between align-items-center">
+                <small></small>
+                <small><strong>$55</strong> / noche</small>
+              </div>
+            </div>
+        </div>
+
+        <div class="col pb-4">
+            <img src="../assets/images/houses/house_8.png" class="img-fluid" alt="La Habana">
+            <div class="px-0 py-2">
+              <small>La Habana</small>
+              <h4 class="mb-0">Casa Hostal Richard</h4>
+              <div class="d-flex justify-content-between align-items-center">
+                <small></small>
+                <small><strong>$55</strong> / noche</small>
+              </div>
+            </div>
+        </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- All Houses END -->
+
+  <!-- Popular Destinations list BEGIN -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 text-muted">
+        <div class="col">
+          <p>
+            <h5 class="text-muted">Destinos populares en Cuba</h5>
+          </p>
+            <div class="px-0">
+              <ul class="list-inline">
+                <li class="list-inline-item">La Habana</li>
+                <li class="list-inline-item">Varadero</li>
+                <li class="list-inline-item">Viñales</li>
+                <li class="list-inline-item">Trinidad</li>
+                <li class="list-inline-item">Santiago de Cuba</li>
+              </ul>
+            </div>
+        </div>
+
+        <div class="col">
+          <p>
+            <h5 class="text-muted">Provincias de Cuba</h5>
+          </p>
+            <div class="px-0">
+              <ul class="list-inline">
+                <li class="list-inline-item">Pinar del Rio</li>
+                <li class="list-inline-item">Artemisa</li>
+                <li class="list-inline-item">La Habana</li>
+                <li class="list-inline-item">Mayabeque</li>
+                <li class="list-inline-item">Matanzas</li>
+                <li class="list-inline-item">Cienfuegos</li>
+                <li class="list-inline-item">Villa Clara</li>
+                <li class="list-inline-item">Sancti Spíritus</li>
+                <li class="list-inline-item">Ciego de Ávila</li>
+                <li class="list-inline-item">Camagüey</li>
+                <li class="list-inline-item">Las Tunas</li>
+                <li class="list-inline-item">Holguín</li>
+                <li class="list-inline-item">Granma</li>
+                <li class="list-inline-item">Santiago de Cuba</li>
+                <li class="list-inline-item">Guantánamo</li>
+              </ul>
+            </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- Popular Destinations list END -->
+
+  <!-- Footer BEGIN -->
+  <footer>
+    <div class="container py-4">
+      <div class="row text-center ">
+        <div class="col-12 col-md-1 px-0">
+          <p>
+            <img src="../assets/images/logo_gray.png" class="d-inline-block align-top" alt=""> 
+          </p>
+        </div>
+        <div class="col-12 col-md-6 text-md-left px-0">
+          <p>
+            2019 CubaHostal. Todos los derechos reservados
+          </p>
+        </div>
+        <div class="col-12 col-md-5 text-md-right">
+          <p>
+            Términos y condiciones de uso
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer END -->
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="../assets/js/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="../assets/js/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="../assets/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  <!-- Moment -->
+  <script src="../assets/libs/moment/moment.js"></script>
+  <!-- Bootstrap Datepicker -->
+  <script src="../assets/libs/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+
+  <!-- Custom Javascript -->
+  <script src="../assets/js/app.js"></script>
+
+</body>
+
+</html>
