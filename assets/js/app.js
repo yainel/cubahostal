@@ -52,7 +52,7 @@ $(document).ready(function(){
     $item.height($wHeight); 
     $item.addClass('full-screen');
 
-    $('#carouselHousesControls .carousel img').each(function() {
+    $('#carouselHousesControls img').each(function() {
     var $src = $(this).attr('src');
     var $color = $(this).attr('data-color');
     $(this).parent().css({
@@ -67,9 +67,9 @@ $(document).ready(function(){
     $item.height($wHeight);
     });
 
-    $('.carousel').carousel({
-    interval: 6000,
-    pause: "false"
+    $('#carouselHousesControls .carousel').carousel({
+    interval: 10000,
+    pause: "true"
     });
 });
 
