@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="keywords" content="your,keywords">
+	<meta name="description" content="Reserva lugares y alojamientos en toda Cuba.">
+  <!-- Bootstrap  -->
+  <link rel="stylesheet" href="../assets/libs/bootstrap/css/bootstrap.min.css" crossorigin="anonymous">
+  <!-- Custom  -->
+  <link rel="stylesheet" href="../assets/css/app.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../assets/fonts/css/font-awesome.min.css">
+  <!-- Daterangepicker -->
+  <link rel="stylesheet" href="../assets/libs/daterangepicker/dist/daterangepicker.css"/>
+  <title>Cubahostal - Hostal</title>
+</head>
+
+<body>
+  <!-- Header BEGIN -->
+  <header>
+    <div class="collapse bg-dark" id="navbarHeader">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-md-7 py-2">
+          </div>
+          <div class="col-sm-4 offset-md-1 py-4 text-right">
+            <h4 class="text-white">Federico de las Mercedes</h4>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-white">Opción 1</a></li>
+              <li><a href="#" class="text-white">Configuración 2</a></li>
+              <li><a href="#" class="text-white">Cerrar Sesión 3</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+      <div class="container d-flex justify-content-between">
+        <a href="#" class="navbar-brand d-flex align-items-center">
+          <img src="../assets/images/logo_text.png" class="d-inline-block align-top img-fluid" alt="">
+        </a>
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa fa-user-circle"></i></h4> <span class="d-none d-md-inline">Mi cuenta</span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <!-- Header END -->
+
+  <!-- Booking Filter BEGIN -->
+  <section class="py-4 text-left">
+    <div class="container">
+      <div class="btn-group col-sm-12 col-md-5 px-0">
+        <a href="#DateCollapse" data-toggle="collapse" class="toggleDate btn btn-lg btn-outline-primary" aria-controls="DateCollapse"><i class="fa fa-calendar"></i> Fechas</a>
+        <a href="#GuestCollapse" data-toggle="collapse" class="toggleGuest btn btn-lg btn-outline-primary" aria-controls="DateCollapse"><i class="fa fa-users"></i> Huéspedes</a>
+        <a class="btn btn-lg btn-outline-primary" aria-controls="DateCollapse">
+          <input type="checkbox" name="wifi" id="wifi" value="wifi">
+          <label class="form-check-label" for="wifi">Wifi</label>
+        </a>
+      </div>
+        <!-- Booking Filter Date BEGIN -->
+        <div class="pt-2 col-sm-12 col-md-5 px-0">
+          <div class="collapse" style="position: absolute; transition: none; z-index: 2;" id="DateCollapse">
+            <div class="card">
+              <form class="form">
+                <div class="card-body">
+                    <div class="row">
+                      <input id="datepicker-filter-button" hidden="hidden">
+                      <div id="datepicker-filter-inline"></div>
+                    </div>
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                  <button type="reset" class="btn btn-light">Limpiar</button>
+                  <button type="submit" class="btn btn-primary">Salvar</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- Booking Filter Date END -->
+        <!-- Booking Filter Guest BEGIN -->
+        <div class="col-sm-12 col-md-5 px-0">
+          <div class="collapse" style="position: absolute; transition: none; z-index: 2;" id="GuestCollapse">
+            <div class="card">
+              <form class="form">
+                <div class="card-body">
+                  <div class="row px-0">
+                    <div class="col-6 col-md-4">
+                      <label>Adultos</label>
+                      <div class="input-group px-0">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-outline-secondary Adultminus" type="button"><i class="fa fa-minus"></i></button>
+                        </div>
+                        <input type="text" class="form-control Adultcount text-center" value="1">
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-secondary Adultplus" type="button" ><i class="fa fa-plus"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-4"> 
+                      <label>Niños: <Small>2 a 12 Años</Small></label>
+                      <div class="input-group px-0">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-outline-secondary Childrenminus" type="button"><i class="fa fa-minus"></i></button>
+                        </div>
+                        <input type="text" class="form-control Childrencount text-center" value="0">
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-secondary Childrenplus" type="button" ><i class="fa fa-plus"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-4"> 
+                      <label>Niños: <small>- 2 Años</small></label>
+                      <div class="input-group px-0">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-outline-secondary Enfantminus" type="button"><i class="fa fa-minus"></i></button>
+                        </div>
+                        <input type="text" class="form-control Enfantcount text-center" value="0">
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-secondary Enfantplus" type="button" ><i class="fa fa-plus"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                  <button type="reset" class="btn btn-light">Limpiar</button>
+                  <button type="submit" class="btn btn-primary">Salvar</button>
+                </div>
+              </form>
+              <!-- Booking Filter Guest END -->
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
+  <!-- Booking Filter END -->
+
+	<section>
+  	<div class="container">
+	  	<div class="row">
+		  	<div class="col py-4">
+		      <h4>Hostal Casa Richard <i class="fa fa-star fa-yellow"></i><strong> 5 (13)</strong></h4>
+		      <h5>La Habana, Vedado</h5>
+		    </div>
+	    </div>
+	    <div class="row no-gutters">
+		  	<div class="col-lg-8 col-md-12 p-1">
+          <!-- Button trigger modal -->
+		  		<img data-toggle="modal" data-target="#exampleModal" src="../assets/images/houses/big_house_1.png" class="img-fluid pt-lg-2" alt="">
+				  <!-- Modal -->
+          <div class="modal p-0" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog mw-100" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">1 / 10</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body p-0">
+                  <!-- Carousel BEGIN -->
+                  <div id="carouselExampleControls" class="carousel slide carousel-fade" data-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active" data-interval="10000">
+                        <img src="../assets/images/houses/slider_house_1.jpg" class="d-block w-100 h-auto" alt="...">
+                      </div>
+                      <div class="carousel-item" data-interval="10000">
+                        <img src="../assets/images/houses/slider_house_2.jpg" class="d-block w-100 h-auto" alt="...">
+                      </div>
+                      <div class="carousel-item" data-interval="10000">
+                        <img src="../assets/images/houses/slider_house_3.jpg" class="d-block w-100 h-auto" alt="...">
+                      </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+                  <!-- Carousel END -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+				<div class="col-lg-4 col-md-12 p-1">
+					<div class="row">
+						<div class="col-lg-12 col-md-12">
+		  				<img src="../assets/images/houses/big_house_2.png" class="img-fluid pt-lg-2" alt="">
+						</div>
+						<div class="col-lg-12 col-md-12 ">
+		  				<img src="../assets/images/houses/big_house_3.png" class="img-fluid pt-2 pt-lg-2" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+  <section>
+  	<div class="container">
+  		<div class="row">
+	  		<div class="d-flex col col-auto py-2">
+			    <img src="../assets/images/user_picture.png" class="img-rounded px-0 py-1" alt="">
+			    <div class="d-flex align-middle px-4 pt-4"><h4>Yuni y Yane</h4> </div>
+			  </div>
+			  <div class="col py-2">
+			    <div class="d-flex justify-content-end px-4 pt-4"><h4>desde <strong>$55</strong><span class="text-muted"> / noche</span></h4> </div>
+			  </div>
+      </div>
+      <hr class="row">
+  	</div>
+  </section>
+  
+  <section>
+  	<div class="container">
+      <div class="row">
+        <div class="col text-muted">
+          <div class="row row-cols-3 py-2 te">
+            <div class="col">
+              <div class="p-2"><i class="fa fa-id-card fa-x2"></i> 8 Huéspedes</div>
+            </div>
+            <div class="col">
+              <div class="p-2 "><i class="fa fa-bed fa-x2"></i> 3 Camas </div>
+            </div>
+            <div class="col">
+              <div class="p-2"><i class="fa fa-wifi fa-x2"></i> Wifi Disponible</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing  amet, consec  amet, consectetur adipiscing elit, sed do eiusmod tempor intetur adipiscing elit, sed do eiusmod tempor in elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiu  amet, consectetur adipiscing elit, sed do eiusmod tempor insmod tempor  amet, consectetur adipiscing elit, sed do eiusmod tempor in incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 py-2">
+              <h4>Características</h4>
+            </div>
+            <div class="col-md-6 py-3">
+              <i class="fa fa-key fa-1x fa-squared-bordered align-middle" aria-hidden="true"></i>
+              <span class="align-middle pl-2"> Acceso Independiente</span>
+            </div>
+            <div class="col-md-6 py-3">
+              <i class="fa fa-unlink fa-1x fa-squared-bordered align-middle" aria-hidden="true"></i>
+              <span class="align-middle pl-2"> Permitido Fumar</span>
+            </div>
+            <div class="col-md-6 py-3">
+              <i class="fa fa-eraser fa-1x fa-squared-bordered align-middle" aria-hidden="true"></i>
+              <span class="align-middle pl-2"> Desayuno y Comida</span>
+            </div>
+            <div class="col-md-6 py-3">
+              <i class="fa fa-scissors fa-1x fa-squared-bordered align-middle" aria-hidden="true"></i>
+              <span class="align-middle pl-2"> Terraza</span>
+            </div>
+            <div class="col-md-6 py-3">
+              <i class="fa fa-wifi fa-1x fa-squared-bordered align-middle" aria-hidden="true"></i>
+              <span class="align-middle pl-2"> Aire Acondicionado</span>
+            </div>
+            <div class="col-md-6 py-3">
+              <i class="fa fa-chain fa-1x fa-squared-bordered align-middle" aria-hidden="true"></i>
+              <span class="align-middle pl-2"> Piscina</span>
+            </div>
+            <div class="col-md-6 py-3">
+              <i class="fa fa-header fa-1x fa-squared-bordered align-middle" aria-hidden="true"></i>
+              <span class="align-middle pl-2"> Agua Climatizada</span>
+            </div>
+            <div class="col-md-6 py-3">
+              <i class="fa fa-th fa-1x fa-squared-bordered align-middle" aria-hidden="true"></i>
+              <span class="align-middle pl-2"> Gimnasio</span>
+            </div>
+            <div class="col-md-6 py-3">
+              <i class="fa fa-font fa-1x fa-squared-bordered align-middle" aria-hidden="true"></i>
+              <span class="align-middle pl-2"> Servicio de Transporte</span>
+            </div>
+            <div class="col-md-6 py-3">
+              <i class="fa fa-tv fa-1x fa-squared-bordered align-middle" aria-hidden="true"></i>
+              <span class="align-middle pl-2"> Lavandería</span>
+            </div>
+            <div class="col-md-6 py-3">
+              <i class="fa fa-upload fa-1x fa-squared-bordered align-middle" aria-hidden="true"></i>
+              <span class="align-middle pl-2"> Computadora disponible</span>
+            </div>
+            <div class="col-md-6 py-3">
+              <i class="fa fa-wifi fa-1x fa-squared-bordered align-middle" aria-hidden="true"></i>
+              <span class="align-middle pl-2"> TV</span>
+            </div>
+          </div>
+        </div>
+        <div class="col bg-dark-light">
+          <div class="row py-2">
+            <div class="col">
+              <div class="p-2"><h4> Fecha</h4></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <input id="datepicker-button" hidden="hidden">
+              <div id="datepicker-inline"></div>
+            </div>
+          </div>
+          <div class="row py-2">
+            <div class="col pt-4">
+              <div class="p-2"><h4> Huéspedes</h4></div>
+              <div class="btn-group col-sm-12 col-md-5 px-0">
+                <a href="#GuestCollapseHostal" data-toggle="collapse" class="toggleGuest btn btn-lg btn-outline-primary" aria-controls="DateCollapse"><i class="fa fa-users"></i> Seleccionar</a>
+              </div>
+
+              <!-- Booking Guest BEGIN -->
+              <div class="col-sm-12 px-0">
+                <div class="collapse" style="position: absolute; transition: none; z-index: 2;" id="GuestCollapseHostal">
+                  <div class="card">
+                    <form class="form">
+                      <div class="card-body">
+                        <div class="row px-0">
+                          <div class="col-6 col-md-4">
+                            <label>Adultos</label>
+                            <div class="input-group px-0">
+                              <div class="input-group-prepend">
+                                <button class="btn btn-outline-secondary Adultminus" type="button"><i class="fa fa-minus"></i></button>
+                              </div>
+                              <input type="text" class="form-control Adultcount text-center" value="1">
+                              <div class="input-group-append">
+                                <button class="btn btn-outline-secondary Adultplus" type="button" ><i class="fa fa-plus"></i></button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-4"> 
+                            <label>Niños: <Small>2 a 12 Años</Small></label>
+                            <div class="input-group px-0">
+                              <div class="input-group-prepend">
+                                <button class="btn btn-outline-secondary Childrenminus" type="button"><i class="fa fa-minus"></i></button>
+                              </div>
+                              <input type="text" class="form-control Childrencount text-center" value="0">
+                              <div class="input-group-append">
+                                <button class="btn btn-outline-secondary Childrenplus" type="button" ><i class="fa fa-plus"></i></button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6 col-md-4"> 
+                            <label>Niños: <small>- 2 Años</small></label>
+                            <div class="input-group px-0">
+                              <div class="input-group-prepend">
+                                <button class="btn btn-outline-secondary Enfantminus" type="button"><i class="fa fa-minus"></i></button>
+                              </div>
+                              <input type="text" class="form-control Enfantcount text-center" value="0">
+                              <div class="input-group-append">
+                                <button class="btn btn-outline-secondary Enfantplus" type="button" ><i class="fa fa-plus"></i></button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <!-- Booking Guest END -->
+            </div>
+          </div>
+          <div class="row py-2">
+            <div class="col pt-4">
+              <div class="p-2"><h4> Habitaciones</h4></div>
+              <div class="col odd-bg py-2">
+                <div class="d-flex">
+                  <div class="col-lg-8 p-2 flex-fill text-left">
+                      <i class="fa fa-check-circle fa-2x align-middle" aria-hidden="true"></i>
+                      <span class="align-middle pl-2"> Habitación 1 (2 personas max)</span>
+                  </div>
+                  <div class="col-lg-4 p-2 flex-fill text-right">
+                    <span class="align-middle">$55.00 / noche</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col odd-bg py-2 mt-2">
+                <div class="d-flex">
+                  <div class="col-lg-8 p-2 flex-fill text-left">
+                      <i class="fa fa-check-circle fa-2x align-middle" aria-hidden="true"></i>
+                      <span class="align-middle pl-2"> Habitación 2 (2 personas max)</span>
+                  </div>
+                  <div class="col-lg-4 p-2 flex-fill text-right">
+                    <span class="align-middle">$65.00 / noche</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="d-flex pt-4">
+                  <div class="col-lg-12 p-2 flex-fill text-right">7 noches</div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="d-flex">
+                  <div class="col-lg-4 p-2 flex-fill text-right">Habitacion 1</div>
+                  <div class="col-lg-4 p-2 flex-fill text-right">$55.00 / noche</div>
+                  <div class="col-lg-4 p-2 flex-fill text-right">$385.00</div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="d-flex">
+                  <div class="col-lg-4 p-2 flex-fill text-right">Habitacion 2</div>
+                  <div class="col-lg-4 p-2 flex-fill text-right">$55.00 / noche</div>
+                  <div class="col-lg-4 p-2 flex-fill text-right">$465.00</div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="d-flex justify-content-end">
+                  <div class="col-lg-4 p-2 flex-fill"> </div>
+                  <div class="col-lg-4 p-2 flex-fill text-right"><strong>Total</strong></div>
+                  <div class="col-lg-4 p-2 flex-fill text-right"><strong>$840.00</strong></div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="d-flex justify-content-end text-info">
+                  <div class="col-6 p-2 flex-fill text-right">Depósito(Pagar ahora)</div>
+                  <div class="col-4 p-2 flex-fill text-right">$90.00</div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="d-flex justify-content-end">
+                  <div class="col-6 p-2 flex-fill text-right">Pagar en el hostal</div>
+                  <div class="col-4 p-2 flex-fill text-right">$750.00</div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="d-flex justify-content-end pt-4">
+                  <div class="col-lg-8 col-sm-6 p-4 flex-fill text-right">Pagar ahora <strong>$90.00</strong> de depósito</div>
+                  <div class="col-lg-4 col-sm-6 p-2 flex-fill text-right">
+                    <button type="submit" class="btn btn-primary btn-lg col-md-12">Reservar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="py-4 pl-2"><h4 class="pr-4"> Localización</h4></div><div class="py-4"><h4>&middot; <span class="pl-3 text-muted text-">Habana, Vedado</span> </h4></div>
+        <img src="../assets/images/google_map_fullwidth.png" class="img-fluid" alt="Google Map">
+      </div>
+    </div>
+  </section>
+
+  <!-- More Houses BEGIN -->
+  <section class="py-5">
+    <div class="container">
+      <h4 class="py-4">Más Hostales en La Habana</h4>
+      <div class="row row-cols-2 row-cols-sm-2 row-cols-md-4">
+
+        <div class="col pb-4">
+            <div id="carouselControls" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="../assets/images/houses/house_1.png" class="img-fluid" alt="La Habana">
+                </div>
+                <div class="carousel-item">
+                  <img src="../assets/images/houses/house_2.png" class="img-fluid" alt="La Habana">
+                </div>
+                <div class="carousel-item">
+                  <img src="../assets/images/houses/house_3.png" class="img-fluid" alt="La Habana">
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+            <div class="px-0 py-2">
+              <h4 class="mb-0">Casa Hostal Richard</h4>
+              <h6 class="pt-2">La Habana, Vedado</h6>
+              <small class="pr-2">3 habitaciones </small> <small>&middot;<i class="fa fa-wifi pl-2"></i> Wifi</small>
+              <div class="d-flex justify-content-between align-items-center pt-2">
+                <small><img src="../assets/images/rating_star.png" class="pb-2"><strong> 5 (13)</strong></small>
+                <small><strong>$55</strong> / noche</small>
+              </div>
+            </div>
+        </div>
+
+        <div class="col pb-4">
+          <img src="../assets/images/houses/house_1.png" class="img-fluid" alt="La Habana">
+          <div class="px-0 py-2">
+            <h4 class="mb-0">Casa Hostal Richard</h4>
+            <h6 class="pt-2">La Habana, Vedado</h6>
+            <small class="pr-2">3 habitaciones </small> <small>&middot;<i class="fa fa-wifi pl-2"></i> Wifi</small>
+            <div class="d-flex justify-content-between align-items-center pt-2">
+              <small><img src="../assets/images/rating_star.png" class="pb-2"><strong> 5 (13)</strong></small>
+              <small><strong>$55</strong> / noche</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col pb-4">
+          <img src="../assets/images/houses/house_1.png" class="img-fluid" alt="La Habana">
+          <div class="px-0 py-2">
+            <h4 class="mb-0">Casa Hostal Richard</h4>
+            <h6 class="pt-2">La Habana, Vedado</h6>
+            <small class="pr-2">3 habitaciones </small> <small>&middot;<i class="fa fa-wifi pl-2"></i> Wifi</small>
+            <div class="d-flex justify-content-between align-items-center pt-2">
+              <small><img src="../assets/images/rating_star.png" class="pb-2"><strong> 5 (13)</strong></small>
+              <small><strong>$55</strong> / noche</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col pb-4">
+          <img src="../assets/images/houses/house_1.png" class="img-fluid" alt="La Habana">
+          <div class="px-0 py-2">
+            <h4 class="mb-0">Casa Hostal Richard</h4>
+            <h6 class="pt-2">La Habana, Vedado</h6>
+            <small class="pr-2">3 habitaciones </small> <small>&middot;<i class="fa fa-wifi pl-2"></i> Wifi</small>
+            <div class="d-flex justify-content-between align-items-center pt-2">
+              <small><img src="../assets/images/rating_star.png" class="pb-2"><strong> 5 (13)</strong></small>
+              <small><strong>$55</strong> / noche</small>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- More Houses END -->
+
+  <!-- Popular Destinations list BEGIN -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 text-muted">
+        <div class="col">
+          <p>
+            <h5 class="text-muted">Destinos populares en Cuba</h5>
+          </p>
+            <div class="px-0">
+              <ul class="list-inline">
+                <li class="list-inline-item">La Habana</li>
+                <li class="list-inline-item">Varadero</li>
+                <li class="list-inline-item">Viñales</li>
+                <li class="list-inline-item">Trinidad</li>
+                <li class="list-inline-item">Santiago de Cuba</li>
+              </ul>
+            </div>
+        </div>
+
+        <div class="col">
+          <p>
+            <h5 class="text-muted">Provincias de Cuba</h5>
+          </p>
+            <div class="px-0">
+              <ul class="list-inline">
+                <li class="list-inline-item">Pinar del Rio</li>
+                <li class="list-inline-item">Artemisa</li>
+                <li class="list-inline-item">La Habana</li>
+                <li class="list-inline-item">Mayabeque</li>
+                <li class="list-inline-item">Matanzas</li>
+                <li class="list-inline-item">Cienfuegos</li>
+                <li class="list-inline-item">Villa Clara</li>
+                <li class="list-inline-item">Sancti Spíritus</li>
+                <li class="list-inline-item">Ciego de Ávila</li>
+                <li class="list-inline-item">Camagüey</li>
+                <li class="list-inline-item">Las Tunas</li>
+                <li class="list-inline-item">Holguín</li>
+                <li class="list-inline-item">Granma</li>
+                <li class="list-inline-item">Santiago de Cuba</li>
+                <li class="list-inline-item">Guantánamo</li>
+              </ul>
+            </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- Popular Destinations list END -->
+
+  <!-- Footer BEGIN -->
+  <footer>
+    <div class="container py-4">
+      <div class="row text-center ">
+        <div class="col-12 col-md-1 px-0">
+          <p>
+            <img src="../assets/images/logo_gray.png" class="d-inline-block align-top" alt=""> 
+          </p>
+        </div>
+        <div class="col-12 col-md-6 text-md-left px-0">
+          <p>
+            2019 CubaHostal. Todos los derechos reservados
+          </p>
+        </div>
+        <div class="col-12 col-md-5 text-md-right">
+          <p>
+            Términos y condiciones de uso
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer END -->
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="../assets/libs/daterangepicker/src/jquery.min.js" crossorigin="anonymous"></script>
+  <script src="../assets/js/popper.min.js" crossorigin="anonymous"></script>
+  <script src="../assets/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+  <!-- Moment -->
+  <script src="../assets/libs/moment/moment.js"></script>
+  <!-- Daterangepicker -->
+  <script src="../assets/libs/daterangepicker/src/jquery.daterangepicker.js"></script>
+  <script src="../assets/libs/daterangepicker/inline.js"></script>
+
+  <!-- Custom Javascript -->
+  <script src="../assets/js/app.js"></script>
+
+</body>
+
+</html>
