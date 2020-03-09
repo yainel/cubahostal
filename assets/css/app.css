@@ -178,16 +178,16 @@ footer .container {
   }
   
 .modal-content {
-height: auto;
-min-height: 100%;
-border-radius: 0;
+	height: auto;
+	min-height: 100%;
+	border-radius: 0;
 }
 .gap {
 	height: 210px !important;
 }
 .set-start-day, .set-end-day, .set-guest-adult, .set-guest-children {
 	font-size: 16px;
-    font-weight: lighter;
+  font-weight: lighter;
 }
 .set-guest-adult, .set-guest-children {
 	font-weight: normal;

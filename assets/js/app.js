@@ -45,6 +45,14 @@ $('.toggleGuest').click(function() {
     $('#DateCollapse').removeClass('show')
 });
 
+$('#guestSave').click(function() {
+    $('#GuestCollapse').removeClass('show')
+});
+
+$(document).ready(function(){
+    $('.month-wrapper').addClass('mx-auto')
+});
+
 $(document).on('click','#dateSave',function(){
     $( "#dateButton .default-date" ).empty();
     $( "#dateButton .start-day" ).empty();
@@ -69,7 +77,6 @@ $(document).on('click','#guestSave',function(){
         $("#guestButton .guest-divider").addClass("d-none");
     }
     
-
     if (Adultcount > 1 ) {
         $("#guestButton .set-guest-adult").html(Adultcount + ' Adultos');
     }   else {
@@ -90,3 +97,20 @@ $(document).click(function(e) {
     	$('.collapse').collapse('hide');	    
     }
 });
+
+$(document).ready(function(){
+    $('.lightgallery').lightGallery({
+      share: false,
+      thumbnail: false,
+      download: false,
+      autoplayControls: false,
+      zoom: false,
+      fullScreen: false,
+      selector: '.house-slider'
+    });
+});
+
+$('.button-all-sliders').on('click', function() {
+   $('.lightgallery>a').trigger('click');
+});
+
