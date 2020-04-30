@@ -169,7 +169,6 @@ footer .container {
 #hostalSlider .modal-header {
 	border-bottom: none;
 }
-
 .modal-dialog {
 	width: 100%;
 	height: 100%;
@@ -191,4 +190,11 @@ footer .container {
 }
 .set-guest-adult, .set-guest-children {
 	font-weight: normal;
+}
+
+
+@media screen and (max-width: 480px) {
+	.date-picker-wrapper .month-wrapper, .date-picker-wrapper .month-wrapper table {
+		width: 100% !important;
+	}
 }
