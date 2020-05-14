@@ -30,14 +30,12 @@
           <a class="btn btn-outline bg-dark dropdown-toggle text-white" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fa fa-user-circle"></i><span class="d-none d-md-inline"> Mi Cuenta</span> 
           </a>
-
           <div class="dropdown-menu dropdown-menu-right mt-2" aria-labelledby="dropdownMenuLink">
             <a class="dropdown-item" href="#">Opción 1</a>
             <a class="dropdown-item" href="#">Configuración 2</a>
             <a class="dropdown-item" href="#">Cerrar Sesión 3</a>
           </div>
         </div>
-        
       </div>
     </div>
   </header>
@@ -47,37 +45,36 @@
   <section class="py-4">
     <div class="container-fluid">
       <div class="row">
-        <div class="col">
-
-        <!-- Booking Filter BEGIN -->
-        <section class="py-4 text-left">
-          <div class="">
-            <div class="btn-group">
-              <a id="dateButton" href="#DateCollapse" data-toggle="collapse" class="toggleDate btn btn-lg btn-outline-primary" aria-controls="DateCollapse">
-                <i class="fa fa-calendar"></i>
-                <span class="default-date"> Fechas</span>
-                <span class="set-start-day"></span> <span class="date-divider d-none">-</span> <span class="set-end-day"></span>
-              </a>
-              <a id="guestButton" href="#GuestCollapse" data-toggle="collapse" class="toggleGuest btn btn-lg btn-outline-primary" aria-controls="DateCollapse">
-                <i class="fa fa-users"></i>
-                <span class="default-guest"> Huéspedes</span>
-                <span class="set-guest-adult"></span><span class="guest-divider d-none">, </span> <span class="set-guest-children"></span>
-              </a>
-              <a class="btn btn-lg btn-outline-primary" aria-controls="DateCollapse">
-                <input type="checkbox" name="wifi" id="wifi" value="wifi">
-                <label class="form-check-label" for="wifi">Wifi</label>
-              </a>
-            </div>
+      <div class="col-sm-12 col-md-6 col-xl" style="max-width:768px;">
+          <!-- Booking Filter BEGIN -->
+          <section class="py-4 text-left">
+            <div class="">
+              <div class="btn-group col-md-10 px-0">
+                <a id="dateButton" href="#DateCollapse" data-toggle="collapse" class="toggleDate btn btn-lg btn-outline-primary" aria-controls="DateCollapse">
+                  <i class="fa fa-calendar"></i>
+                  <span class="default-date"> Fechas</span>
+                  <span class="set-start-day"></span> <span class="date-divider d-none">-</span> <span class="set-end-day"></span>
+                </a>
+                <a id="guestButton" href="#GuestCollapse" data-toggle="collapse" class="toggleGuest btn btn-lg btn-outline-primary" aria-controls="DateCollapse">
+                  <i class="fa fa-users"></i>
+                  <span class="default-guest"> Huéspedes</span>
+                  <span class="set-guest-adult"></span><span class="guest-divider d-none">, </span> <span class="set-guest-children"></span>
+                </a>
+                <a class="btn btn-lg btn-outline-primary" aria-controls="DateCollapse">
+                  <input type="checkbox" name="wifi" id="wifi" value="wifi">
+                  <label class="form-check-label" for="wifi">Wifi</label>
+                </a>
+              </div>
               <!-- Booking Filter Date BEGIN -->
-              <div class="pt-2 col-sm-12 col-md-6">
+              <div class="pt-2 px-0">
                 <div class="collapse" style="position: absolute; transition: none; z-index: 2;" id="DateCollapse">
                   <div class="card">
                     <form class="form">
                       <div class="card-body">
-                          <div class="row">
-                            <input id="datepicker-filter-button" hidden="hidden">
-                            <div id="datepicker-filter-inline"></div>
-                          </div>
+                        <div class="row">
+                          <input id="datepicker-filter-button" hidden="hidden">
+                          <div id="datepicker-filter-inline"></div>
+                        </div>
                       </div>
                       <div class="card-footer d-flex justify-content-between">
                         <button type="reset" class="btn btn-light">Limpiar</button>
@@ -89,7 +86,7 @@
               </div>
               <!-- Booking Filter Date END -->
               <!-- Booking Filter Guest BEGIN -->
-              <div class="col-sm-12 px-0">
+              <div class="col-sm-12 col-md-10 px-0">
                 <div class="collapse" style="position: absolute; transition: none; z-index: 2;" id="GuestCollapse">
                   <div class="card">
                     <form class="form">
@@ -107,7 +104,7 @@
                               </div>
                             </div>
                           </div>
-                          <div class="col-6 col-md-4"> 
+                          <div class="col-6 col-md-4">
                             <label>Niños: <Small>2 a 12 Años</Small></label>
                             <div class="input-group px-0">
                               <div class="input-group-prepend">
@@ -119,7 +116,7 @@
                               </div>
                             </div>
                           </div>
-                          <div class="col-6 col-md-4"> 
+                          <div class="col-6 col-md-4">
                             <label>Niños: <small>- 2 Años</small></label>
                             <div class="input-group px-0">
                               <div class="input-group-prepend">
@@ -135,33 +132,33 @@
                       </div>
                       <div class="card-footer d-flex justify-content-between">
                         <button type="reset" class="btn btn-light">Limpiar</button>
-                        <a id="guestSave" href="#" class="btn btn-primary">Salvar</a>
+                        <a href="#" id="guestSave" class="btn btn-primary">Salvar</a>
                       </div>
                     </form>
                     <!-- Booking Filter Guest END -->
                   </div>
                 </div>
               </div>
-          </div>
-        </section>
-        <!-- Booking Filter END -->
+            </div>
+          </section>
+          <!-- Booking Filter END -->
 
         <h4 class="pb-4">Hostales en La Habana (300)</h4>
         <a href="#" class="btn btn-lg btn-outline-primary"><i class="fa fa-map-marker"></i> Destino</a>
         <span class="px-4 text-muted">Filtra por 9 destinos en La Habana</span>
-        
-        <div class="row pt-4 HouseCarousel">
-          <div class="col-md-6">
+
+        <div class="row px-4 px-md-0 pt-4 HouseCarousel">
+          <div class="col-sm-12 col-lg">
             <div id="HouseCarouselControls-1" class="carousel slide" data-ride="carousel" data-interval="50000">
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img src="../assets/images/houses/house_1.png" class="img-fluid" alt="La Habana">
+                  <img src="../assets/images/houses/house_1.png" class="img-fluid img-min-height" alt="La Habana">
                 </div>
                 <div class="carousel-item">
-                  <img src="../assets/images/houses/house_2.png" class="img-fluid" alt="La Habana">
+                  <img src="../assets/images/houses/house_2.png" class="img-fluid img-min-height" alt="La Habana">
                 </div>
                 <div class="carousel-item">
-                  <img src="../assets/images/houses/house_3.png" class="img-fluid" alt="La Habana">
+                  <img src="../assets/images/houses/house_3.png" class="img-fluid img-min-height" alt="La Habana">
                 </div>
               </div>
               <a class="carousel-control-prev carousel-control" href="#HouseCarouselControls-1" role="button" data-slide="prev">
@@ -174,29 +171,29 @@
               </a>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-sm-12 col-lg">
             <h4 class="pt-2">Casa Hostal Richard</h4>
             <small>La Habana, Vedado</small>
             <h6 class="py-2">3 habitaciones &middot; <i class="fa fa-wifi"></i> Wi-Fi Disponible</h6>
-            <div class="d-flex justify-content-between align-items-end pt-4">
+            <div class="d-flex justify-content-between align-items-end">
               <small><img src="../assets/images/rating_star.png" class="pb-2"><strong> 5 (13)</strong></small>
               <small><strong>$55</strong> / noche</small>
             </div>
           </div>
         </div>
         <hr>
-        <div class="row pt-4 HouseCarousel">
-          <div class="col-md-6">
+        <div class="row px-4 px-md-0 pt-4 HouseCarousel">
+          <div class="col-sm-12 col-lg">
             <div id="HouseCarouselControls-2" class="carousel slide" data-ride="carousel" data-interval="50000">
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img src="../assets/images/houses/house_1.png" class="img-fluid" alt="La Habana">
+                  <img src="../assets/images/houses/house_1.png" class="img-fluid img-min-height" alt="La Habana">
                 </div>
                 <div class="carousel-item">
-                  <img src="../assets/images/houses/house_2.png" class="img-fluid" alt="La Habana">
+                  <img src="../assets/images/houses/house_2.png" class="img-fluid img-min-height" alt="La Habana">
                 </div>
                 <div class="carousel-item">
-                  <img src="../assets/images/houses/house_3.png" class="img-fluid" alt="La Habana">
+                  <img src="../assets/images/houses/house_3.png" class="img-fluid img-min-height" alt="La Habana">
                 </div>
               </div>
               <a class="carousel-control-prev carousel-control" href="#HouseCarouselControls-2" role="button" data-slide="prev">
@@ -209,29 +206,29 @@
               </a>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-sm-12 col-lg">
             <h4 class="pt-2">Casa Hostal Richard</h4>
             <small>La Habana, Vedado</small>
             <h6 class="py-2">3 habitaciones &middot; <i class="fa fa-wifi"></i> Wi-Fi Disponible</h6>
-            <div class="d-flex justify-content-between align-items-end pt-4">
+            <div class="d-flex justify-content-between pt-4">
               <small><img src="../assets/images/rating_star.png" class="pb-2"><strong> 5 (13)</strong></small>
               <small><strong>$55</strong> / noche</small>
             </div>
           </div>
         </div>
         <hr>
-        <div class="row pt-4 HouseCarousel">
-          <div class="col-md-6">
+        <div class="row px-4 px-md-0 pt-4 HouseCarousel">
+          <div class="col-sm-12 col-lg">
             <div id="HouseCarouselControls-3" class="carousel slide" data-ride="carousel" data-interval="50000">
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img src="../assets/images/houses/house_1.png" class="img-fluid" alt="La Habana">
+                  <img src="../assets/images/houses/house_1.png" class="img-fluid img-min-height" alt="La Habana">
                 </div>
                 <div class="carousel-item">
-                  <img src="../assets/images/houses/house_2.png" class="img-fluid" alt="La Habana">
+                  <img src="../assets/images/houses/house_2.png" class="img-fluid img-min-height" alt="La Habana">
                 </div>
                 <div class="carousel-item">
-                  <img src="../assets/images/houses/house_3.png" class="img-fluid" alt="La Habana">
+                  <img src="../assets/images/houses/house_3.png" class="img-fluid img-min-height" alt="La Habana">
                 </div>
               </div>
               <a class="carousel-control-prev carousel-control" href="#HouseCarouselControls-3" role="button" data-slide="prev">
@@ -244,7 +241,7 @@
               </a>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-sm-12 col-lg">
             <h4 class="pt-2">Casa Hostal Richard</h4>
             <small>La Habana, Vedado</small>
             <h6 class="py-2">3 habitaciones &middot; <i class="fa fa-wifi"></i> Wi-Fi Disponible</h6>
@@ -273,8 +270,8 @@
           <a href="#" class="py-4">Mostrar todos los hotales en La Habana (300)</a>
         </div>
       </div>
-      <div class="col-md-7 pr-lg-0">
-        <img src="../assets/images/google_map.png" class="img-fluid" alt="Responsive image">
+      <div class="col-sm-12 col-md col-xl">
+        <div id="map" class="img-min-height" style="height: 450px; width: 100%;"></div>
       </div>
       </div>
     </div>
@@ -283,9 +280,9 @@
 
   <!-- Popular Destinations list BEGIN -->
   <section class="py-5">
-    <div class="container">
-      <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 text-muted">
-        <div class="col">
+    <div class="container-fluid">
+      <div class="row text-muted">
+        <div class="col-sm-12 col-md-6 col-xl-5">
           <p>
             <h5 class="text-muted">Destinos populares en Cuba</h5>
           </p>
@@ -322,8 +319,8 @@
               </div>
         </div>
 
-        <div class="col">
-          
+        <div class="col-sm-12 col-md-6 col-xl-7">
+
         </div>
 
       </div>
@@ -354,6 +351,22 @@
     </div>
   </footer>
   <!-- Footer END -->
+
+  <script>
+      // Initialize and add the map
+      function initMap() {
+          // The location of Uluru
+          var uluru = {lat: -25.344, lng: 131.036};
+          // The map, centered at Uluru
+          var map = new google.maps.Map(
+              document.getElementById('map'), {zoom: 10, center: uluru});
+          // The marker, positioned at Uluru
+          var marker = new google.maps.Marker({position: uluru, map: map});
+      }
+  </script>
+  <script async defer
+          src="https://maps.googleapis.com/maps/api/js?callback=initMap">
+  </script>
 
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="../assets/libs/daterangepicker/src/jquery.min.js" crossorigin="anonymous"></script>

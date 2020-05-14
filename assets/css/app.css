@@ -191,10 +191,7 @@ footer .container {
 .set-guest-adult, .set-guest-children {
 	font-weight: normal;
 }
-
-
-@media screen and (max-width: 480px) {
-	.date-picker-wrapper .month-wrapper, .date-picker-wrapper .month-wrapper table {
-		width: 100% !important;
-	}
+.img-min-height {
+	min-width:100%;
+	min-height:100%
 }
