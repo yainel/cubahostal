@@ -55,7 +55,7 @@
   <!-- Booking Filter BEGIN -->
   <section class="py-4 text-left">
     <div class="container">
-      <div class="btn-group col-sm-12 col-md-5 px-0">
+      <div class="btn-group col-sm-12 col-md-12 col-lg-6 px-0">
         <a id="dateButton" href="#DateCollapse" data-toggle="collapse" class="toggleDate btn btn-lg btn-outline-primary" aria-controls="DateCollapse">
           <i class="fa fa-calendar"></i>
           <span class="default-date"> Fechas</span>
@@ -66,21 +66,23 @@
           <span class="default-guest"> Huéspedes</span>
           <span class="set-guest-adult"></span><span class="guest-divider d-none">, </span> <span class="set-guest-children"></span>
         </a>
-        <a class="btn btn-lg btn-outline-primary" aria-controls="DateCollapse">
-          <input type="checkbox" name="wifi" id="wifi" value="wifi">
-          <label class="form-check-label" for="wifi">Wifi</label>
+        <a class="btn btn-lg btn-outline-primary markerDiv" aria-controls="DateCollapse">
+          <input type="checkbox" id="test1" checked="checked"/>
+          <label for="test1"> </label><label for="test1">Wifi</label>
         </a>
       </div>
         <!-- Booking Filter Date BEGIN -->
-        <div class="pt-2 col-sm-12 col-md-5 px-0">
+        <div class="pt-2 px-0 col-sm-12">
           <div class="collapse" style="position: absolute; transition: none; z-index: 2;" id="DateCollapse">
             <div class="card">
               <form class="form">
                 <div class="card-body">
-                    <div class="row">
+                  <div class="row">
+                    <div class="col">
                       <input id="datepicker-filter-button" hidden="hidden">
-                      <div id="datepicker-filter-inline"></div>
+                      <div id="datepicker-filter-inline" class="d-flex justify-content-center"></div>
                     </div>
+                  </div>
                 </div>
                 <div class="card-footer d-flex justify-content-between">
                   <button type="reset" class="btn btn-light">Limpiar</button>
@@ -92,7 +94,7 @@
         </div>
         <!-- Booking Filter Date END -->
         <!-- Booking Filter Guest BEGIN -->
-        <div class="col-sm-12 col-md-5 px-0">
+        <div class="col-sm-12 col-lg-6 px-0">
           <div class="collapse" style="position: absolute; transition: none; z-index: 2;" id="GuestCollapse">
             <div class="card">
               <form class="form">
@@ -110,7 +112,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-6 col-md-4"> 
+                    <div class="col-6 col-md-4">
                       <label>Niños: <Small>2 a 12 Años</Small></label>
                       <div class="input-group px-0">
                         <div class="input-group-prepend">
@@ -122,7 +124,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="col-6 col-md-4"> 
+                    <div class="col-6 col-md-4">
                       <label>Niños: <small>- 2 Años</small></label>
                       <div class="input-group px-0">
                         <div class="input-group-prepend">
@@ -166,7 +168,7 @@
         <div class="col">
             <img src="../assets/images/destinations/la_habana.png" class="img-fluid" alt="La Habana">
             <div class="px-0 py-2">
-              <h4 class="mb-0">La Habana</p>
+              <h4 class="mb-0">La Habana</h4>
               <h6>50 hostales</h6>
             </div>
         </div>
@@ -174,7 +176,7 @@
         <div class="col">
             <img src="../assets/images/destinations/vinales.png" class="img-fluid" alt="La Habana">
             <div class="px-0 py-2">
-              <h4 class="mb-0">La Habana</p>
+              <h4 class="mb-0">La Habana</h4>
               <h6>50 hostales</h6>
             </div>
         </div>
@@ -182,7 +184,7 @@
         <div class="col">
             <img src="../assets/images/destinations/varadero.png" class="img-fluid" alt="La Habana">
             <div class="px-0 py-2">
-              <h4 class="mb-0">La Habana</p>
+              <h4 class="mb-0">La Habana</h4>
               <h6>50 hostales</h6>
             </div>
         </div>
@@ -190,7 +192,7 @@
         <div class="col">
             <img src="../assets/images/destinations/trinidad.png" class="img-fluid" alt="La Habana">
             <div class="px-0 py-2">
-              <h4 class="mb-0">La Habana</p>
+              <h4 class="mb-0">La Habana</h4>
               <h6>50 hostales</h6>
             </div>
         </div>
@@ -198,7 +200,7 @@
         <div class="col">
             <img src="../assets/images/destinations/santiago_de_cuba.png" class="img-fluid" alt="La Habana">
             <div class="px-0 py-2">
-              <h4 class="mb-0">La Habana</p>
+              <h4 class="mb-0">La Habana</h4>
               <h6>50 hostales</h6>
             </div>
         </div>
@@ -222,7 +224,7 @@
           <div class="col">
               <img src="../assets/images/destinations/la_habana.png" class="img-fluid" alt="La Habana">
               <div class="px-0 py-2">
-                <h4 class="mb-0">La Habana</p>
+                <h4 class="mb-0">La Habana</h4>
                 <h6>50 hostales</h6>
               </div>
           </div>
@@ -230,7 +232,7 @@
           <div class="col">
               <img src="../assets/images/destinations/vinales.png" class="img-fluid" alt="La Habana">
               <div class="px-0 py-2">
-                <h4 class="mb-0">La Habana</p>
+                <h4 class="mb-0">La Habana</h4>
                 <h6>50 hostales</h6>
               </div>
           </div>
@@ -238,7 +240,7 @@
           <div class="col">
               <img src="../assets/images/destinations/la_habana.png" class="img-fluid" alt="La Habana">
               <div class="px-0 py-2">
-                <h4 class="mb-0">La Habana</p>
+                <h4 class="mb-0">La Habana</h4>
                 <h6>50 hostales</h6>
               </div>
           </div>
@@ -246,7 +248,7 @@
           <div class="col">
               <img src="../assets/images/destinations/vinales.png" class="img-fluid" alt="La Habana">
               <div class="px-0 py-2">
-                <h4 class="mb-0">La Habana</p>
+                <h4 class="mb-0">La Habana</h4>
                 <h6>50 hostales</h6>
               </div>
           </div>
@@ -254,7 +256,7 @@
           <div class="col">
               <img src="../assets/images/destinations/varadero.png" class="img-fluid" alt="La Habana">
               <div class="px-0 py-2">
-                <h4 class="mb-0">La Habana</p>
+                <h4 class="mb-0">La Habana</h4>
                 <h6>50 hostales</h6>
               </div>
           </div>
@@ -262,7 +264,7 @@
           <div class="col">
               <img src="../assets/images/destinations/trinidad.png" class="img-fluid" alt="La Habana">
               <div class="px-0 py-2">
-                <h4 class="mb-0">La Habana</p>
+                <h4 class="mb-0">La Habana</h4>
                 <h6>50 hostales</h6>
               </div>
           </div>
@@ -270,7 +272,7 @@
           <div class="col">
               <img src="../assets/images/destinations/santiago_de_cuba.png" class="img-fluid" alt="La Habana">
               <div class="px-0 py-2">
-                <h4 class="mb-0">La Habana</p>
+                <h4 class="mb-0">La Habana</h4>
                 <h6>50 hostales</h6>
               </div>
           </div>
@@ -278,7 +280,7 @@
           <div class="col">
               <img src="../assets/images/destinations/varadero.png" class="img-fluid" alt="La Habana">
               <div class="px-0 py-2">
-                <h4 class="mb-0">La Habana</p>
+                <h4 class="mb-0">La Habana</h4>
                 <h6>50 hostales</h6>
               </div>
           </div>
@@ -286,7 +288,7 @@
           <div class="col">
               <img src="../assets/images/destinations/trinidad.png" class="img-fluid" alt="La Habana">
               <div class="px-0 py-2">
-                <h4 class="mb-0">La Habana</p>
+                <h4 class="mb-0">La Habana</h4>
                 <h6>50 hostales</h6>
               </div>
           </div>
@@ -294,7 +296,7 @@
           <div class="col">
               <img src="../assets/images/destinations/santiago_de_cuba.png" class="img-fluid" alt="La Habana">
               <div class="px-0 py-2">
-                <h4 class="mb-0">La Habana</p>
+                <h4 class="mb-0">La Habana</h4>
                 <h6>50 hostales</h6>
               </div>
           </div>

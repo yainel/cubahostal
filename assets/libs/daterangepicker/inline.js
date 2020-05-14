@@ -6,6 +6,7 @@ $(function()
 			container: '#datepicker-filter-inline',
 			alwaysOpen: true,
 			language: 'es',
+            //singleMonth: true,
 			format: 'MMM D',
 			hoveringTooltip: function(days, startTime, hoveringTime)
 			{
@@ -23,7 +24,7 @@ $(function()
 			selectForward: true,
 			showDateFilter: function(time, date)
 			{
-				return '<div style="padding:0 5px;">\
+				return '<div style="padding:5px;">\
 							<span style="font-weight:bold">'+date+'</span>\
 							<div style="opacity:0.3;"></div>\
 						</div>';

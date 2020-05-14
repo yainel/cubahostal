@@ -114,3 +114,8 @@ $('.button-all-sliders').on('click', function() {
    $('.lightgallery>a').trigger('click');
 });
 
+$('.markerDiv').on('click', function(){
+    var checkbox = $(this).children('input[type="checkbox"]');
+    checkbox.prop('checked', !checkbox.prop('checked'));
+});
+

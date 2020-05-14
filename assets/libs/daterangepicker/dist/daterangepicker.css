@@ -121,12 +121,12 @@
 }
 
 .date-picker-wrapper .month-wrapper table {
-  width: 190px;
+  width: 200px;
   float: left;
 }
 
 .date-picker-wrapper .month-wrapper table.month2 {
-  width: 190px;
+  width: 200px;
   float: left;
 }
 
@@ -139,7 +139,6 @@
 }
 
 .date-picker-wrapper .month-wrapper table .day {
-  padding: 5px 0;
   line-height: 1;
   font-size: 12px;
   margin-bottom: 1px;
@@ -147,15 +146,64 @@
   cursor: default;
 }
 
+@media screen and (max-width: 479px) {
+  .date-picker-wrapper .month-wrapper table .day {
+    padding: 5px;
+  }
+  .date-picker-wrapper .month-wrapper table {
+    width: 250px;
+    float: left;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 989px) {
+  .date-picker-wrapper .month-wrapper table .day {
+    padding: 5px 6px;
+  }
+  .date-picker-wrapper .month-wrapper table {
+    width: 300px;
+    float: left;
+  }
+
+  .date-picker-wrapper .month-wrapper table.month2 {
+    width: 300px;
+    float: left;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .date-picker-wrapper .month-wrapper table .day {
+    padding: 5px 0;
+  }
+  .date-picker-wrapper .month-wrapper table {
+    width: 200px;
+    float: left;
+  }
+  .date-picker-wrapper .month-wrapper table.month2 {
+    width: 200px;
+    float: left;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 5000px) {
+  .date-picker-wrapper .month-wrapper table .day {
+    padding: 5px 2px;
+  }
+  .date-picker-wrapper .month-wrapper table {
+    width: 250px;
+    float: left;
+  }
+  .date-picker-wrapper .month-wrapper table.month2 {
+    width: 250px;
+    float: left;
+  }
+}
+
 .date-picker-wrapper .month-wrapper table div.day.lastMonth, .date-picker-wrapper .month-wrapper table div.day.nextMonth {
   color: #999;
   cursor: default;
 }
-
 .date-picker-wrapper .month-wrapper table .day.checked {
   background-color: #9cdbf7;
 }
-
 .date-picker-wrapper .month-wrapper table .week-name {
   height: 20px;
   line-height: 20px;
