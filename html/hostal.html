@@ -183,24 +183,97 @@
         <div class="col-sm-12 col-md-12 col-lg-6 bg-dark-light">
           <div class="row py-2">
             <div class="col">
-              <div class="p-2"><h4> Fecha</h4></div>
+              <div><h4>Huéspedes</h4></div>
+              <!-- Booking Filter BEGIN -->
+              <section class="py-4 text-left">
+                <div class="">
+                  <div class="btn-group col-sm-6 col-md-12 col-lg-6 px-0 mb-2">
+                    <a id="guestButton" href="#GuestCollapse" data-toggle="collapse" class="toggleGuest btn btn-lg btn-outline-primary" aria-controls="DateCollapse">
+                      <i class="fa fa-users"></i>
+                      <span class="default-guest"> Seleccione</span>
+                      <span class="set-guest-adult"></span><span class="guest-divider d-none">, </span> <span class="set-guest-children"></span>
+                    </a>
+                  </div>
+
+                  <!-- Booking Filter Guest BEGIN -->
+                  <div class="col-12 px-0">
+                    <div class="collapse" style="position: absolute; transition: none; z-index: 2;" id="GuestCollapse">
+                      <div class="card">
+                        <!--<form class="form">-->
+                          <div class="card-body">
+                            <div class="row px-0">
+                              <div class="col-6 col-md-4">
+                                <label>Adultos</label>
+                                <div class="input-group px-0">
+                                  <div class="input-group-prepend">
+                                    <button class="btn btn-outline-secondary Adultminus" type="button"><i class="fa fa-minus"></i></button>
+                                  </div>
+                                  <input type="text" class="form-control Adultcount text-center" value="1">
+                                  <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary Adultplus" type="button" ><i class="fa fa-plus"></i></button>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-6 col-md-4">
+                                <label>Niños: <Small>2 a 12 Años</Small></label>
+                                <div class="input-group px-0">
+                                  <div class="input-group-prepend">
+                                    <button class="btn btn-outline-secondary Childrenminus" type="button"><i class="fa fa-minus"></i></button>
+                                  </div>
+                                  <input type="text" class="form-control Childrencount text-center" value="0">
+                                  <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary Childrenplus" type="button" ><i class="fa fa-plus"></i></button>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-6 col-md-4">
+                                <label>Niños: <small>- 2 Años</small></label>
+                                <div class="input-group px-0">
+                                  <div class="input-group-prepend">
+                                    <button class="btn btn-outline-secondary Enfantminus" type="button"><i class="fa fa-minus"></i></button>
+                                  </div>
+                                  <input type="text" class="form-control Enfantcount text-center" value="0">
+                                  <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary Enfantplus" type="button" ><i class="fa fa-plus"></i></button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card-footer d-flex justify-content-end">
+                            <a id="guestSave" class="btn btn-primary" style="color:#fff!important;">Salvar</a>
+                          </div>
+                        <!--</form>-->
+                        <!-- Booking Filter Guest END -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <!-- Booking Filter END -->
             </div>
           </div>
+          <div class="row py-2">
+          <div class="col">
+            <div><h4>Fecha</h4></div>
+          </div>
+        </div>
           <div class="row">
             <div class="col">
               <input id="datepicker-filter-button" hidden="hidden">
               <div id="datepicker-filter-inline" class="d-flex justify-content-center"></div>
             </div>
+            <div class="col d-flex justify-content-end">
+              <button id="datepicker-clear" class="btn btn-light">Limpiar fechas</button>
+            </div>
           </div>
           <div class="row py-2">
             <div class="col pt-4">
-              <div class="p-2"><h4> Huéspedes</h4></div>
-
               <!-- Booking Guest BEGIN -->
               <div class="col-sm-12 px-0">
                 <div class="collapse pt-2" style="position: absolute; transition: none; z-index: 2;" id="GuestCollapseHostal">
                   <div class="card">
-                    <form class="form">
+                    <!--<form class="form">-->
                       <div class="card-body">
                         <div class="row px-0">
                           <div class="col-6 col-md-4">
@@ -241,7 +314,7 @@
                           </div>
                         </div>
                       </div>
-                    </form>
+                    <!--</form>-->
                   </div>
                 </div>
               </div>
@@ -250,7 +323,7 @@
           </div>
           <div class="row py-2">
             <div class="col pt-4">
-              <div class="p-2"><h4> Habitaciones</h4></div>
+              <div><h4>Habitaciones</h4></div>
               <div class="col odd-bg py-2">
                 <div class="d-flex">
                   <div class="col-lg-8 p-2 flex-fill text-left">
@@ -315,7 +388,7 @@
                 <div class="row d-flex justify-content-end pt-4">
                   <div class="col-sm-12 col-lg-8 p-4 text-right">Pagar ahora <strong>$90.00</strong> de depósito</div>
                   <div class="col-sm-6 col-lg-4 p-2 text-right">
-                    <button type="submit" class="btn btn-primary btn-lg col-md-12"> Reservar </button>
+                    <button type="button" class="btn btn-primary btn-lg col-md-12 reserva"> Reservar </button>
                   </div>
                 </div>
               </div>
@@ -565,6 +638,7 @@
           src="https://maps.googleapis.com/maps/api/js?callback=initMap">
   </script>
 
+
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="../assets/libs/daterangepicker/src/jquery.min.js" crossorigin="anonymous"></script>
   <script src="../assets/js/popper.min.js" crossorigin="anonymous"></script>
@@ -573,16 +647,14 @@
   <script src="../assets/libs/moment/moment.js"></script>
   <!-- Daterangepicker -->
   <script src="../assets/libs/daterangepicker/src/jquery.daterangepicker.js"></script>
-  <script src="../assets/libs/daterangepicker/inline.js"></script>
+  <script src="../assets/js/daterangepicker.api.js"></script>
   <!-- Lightgallery -->
   <script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>
   <script src="../assets/libs/lightGallery/dist/js/lightgallery-all.min.js"></script>
   <script src="../assets/libs/lightGallery/lib/jquery.mousewheel.min.js"></script>
   <!-- Custom -->
   <script src="../assets/js/app.js"></script>
+  <script src="../assets/js/lightgalery.js"></script>
 
 </body>
-
-
-
 </html>
