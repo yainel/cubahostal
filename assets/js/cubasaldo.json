@@ -1,0 +1,27 @@
+{
+	"id":	1,
+	"nombre":	"Titulo de la casa",
+	"reservas":
+	[
+		{
+			"fecha_llegada":	"20200606",
+			"fecha_salida":		"20200620",
+			"confirmada":		true
+		},
+		{
+			"fecha_llegada":	"20200701",
+			"fecha_salida":		"20200712",
+			"confirmada":		true
+		},
+		{	
+			"fecha_llegada":	"20200725",
+			"fecha_salida":		"20200805",
+			"confirmada":		true
+		},
+		{	
+			"fecha_llegada":	"20200807",
+			"fecha_salida":		"20200817",
+			"confirmada":		true
+		}
+	]
+}
