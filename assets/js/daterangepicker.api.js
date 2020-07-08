@@ -61,16 +61,14 @@ $('#datepicker-filter-button').dateRangePicker(
 	// separator: ' ',
 	hoveringTooltip: function(days, startTime, hoveringTime)
 	{
-		if ((days-1) == 0) {
+		if ((days-1) === 1) {
 			return '1 noche ';
-		}
-		if ((days-1) <= 1) {
-			return (days-1) + ' noche';
 		}
 		return (days-1) > 1 ? (days-1) + ' ' + 'noches' : ' ';
 	},
-	maxDays: 30,
+    stickyMonths: true,
 	startDate: new Date(),
+    minDays: 2,
 	selectForward: true,
 	showDateFilter: function(time, date)
 	{
@@ -93,10 +91,25 @@ $('#datepicker-filter-button').dateRangePicker(
 		}
 	}
 
-});
+}).find('.date-picker-wrapper .month-wrapper table .day').removeClass('real-today');
 
 $('#datepicker-clear').click(function(evt)
 {
     evt.stopPropagation();
     $('#datepicker-filter-button').data('dateRangePicker').clear();
 });
+
+$('.next').click(function(){
+    //$('.month-wrapper').show('slide', { direction: 'right' }, 600);
+    $('.month-wrapper').hide().fadeIn();
+
+});
+
+$('.prev').click(function(){
+    //$('.month-wrapper').show('slide', { direction: 'right' }, 600);
+    $('.month-wrapper').hide().fadeIn();
+
+});
+
+
+
