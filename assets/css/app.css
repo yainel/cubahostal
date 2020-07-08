@@ -77,7 +77,6 @@ footer .container {
 .btn-outline-primary {
 	border-color: #007bff1c;
 	color: #444;
-
 }
 	.btn-outline-primary:hover, .btn-outline-primary:active {
 		background-color: #2863dd;
@@ -120,7 +119,6 @@ footer .container {
 	.right-quote>div {
 		border-right: solid 9px #f3f2f1;
 	}
-
 .left-quote {
 	padding-left: 27px;
 }
@@ -161,7 +159,10 @@ footer .container {
 		background-color: #2863DD;
 
 	}
-
+/* Daterangepicker Today Background Disabled*/
+.date-picker-wrapper .month-wrapper table .day.real-today {
+	background-color: rgba(255, 255, 255, 0) !important;
+}
 .HouseCarousel .carousel-control { visibility: hidden; opacity: 1; }
 .HouseCarousel:hover .carousel-control { visibility: visible; }
 
