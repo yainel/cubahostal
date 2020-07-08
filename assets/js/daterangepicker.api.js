@@ -99,17 +99,40 @@ $('#datepicker-clear').click(function(evt)
     $('#datepicker-filter-button').data('dateRangePicker').clear();
 });
 
-$('.next').click(function(){
-    //$('.month-wrapper').show('slide', { direction: 'right' }, 600);
-    $('.month-wrapper').hide().fadeIn();
+//Next action
+var $next = $('#datepicker-filter-inline').find('.next').on('click', function () {
+        console.log('capture plugin next action');
+        return false;
+    }),
+    clickNextListener = $._data($next[0], 'events').click[0];
 
+$next.off('click');
+
+$next.click(function () {
+    $('.month1').hide('slide', {direction: 'left'}, 500);
+    $('.month2').hide('slide', {direction: 'left'}, 500);
+    setTimeout(function () {
+        clickNextListener.handler();
+    }, 1000);
+    $('.month1').show('slide', {direction: 'right'}, 500);
+    $('.month2').show('slide', {direction: 'right'}, 500);
 });
 
-$('.prev').click(function(){
-    //$('.month-wrapper').show('slide', { direction: 'right' }, 600);
-    $('.month-wrapper').hide().fadeIn();
+//Prev action
+var $prev = $('#datepicker-filter-inline').find('.prev').on('click', function () {
+        console.log('capture plugin prev action');
+        return false;
+    }),
+    clickPrevListener = $._data($prev[0], 'events').click[0];
 
+$prev.off('click');
+
+$prev.click(function () {
+    $(".month1").hide('slide', {direction: 'right'}, 500);
+    $(".month2").hide('slide', {direction: 'right'}, 500);
+    setTimeout(function () {
+        clickPrevListener.handler();
+    }, 1000);
+    $('.month1').show('slide', {direction: 'left'}, 500);
+    $('.month2').show('slide', {direction: 'left'}, 500);
 });
-
-
-
