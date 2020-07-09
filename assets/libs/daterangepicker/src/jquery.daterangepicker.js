@@ -1441,7 +1441,7 @@
             box.find('.day.last-date-selected').removeClass('last-date-selected');
             box.find('.day.first-date-selected').removeClass('first-date-selected');
             opt.setValue.call(selfDom, '');
-            checkSelectionValid();
+            // checkSelectionValid();
             showSelectedInfo();
             showSelectedDays();
         }
